@@ -6,12 +6,9 @@ import './mySearch.css'
 const Search = (props) => {
     const [city, setCity] = useState("");
     const [country, setCountry] = useState("");
-    const [temp, setTemp] = useState("");
     const [min, setMin] = useState("");
     const [max, setMax] = useState("");
-    const [description, setDescription] = useState("");
-    const [icon, setIcon] = useState("");
-    const [showMyComponent, setShowMyComponent] = useState("");
+    
 
 
     const getWeatherData = async (city, country) => {
@@ -21,13 +18,11 @@ const Search = (props) => {
             url: `https://api.openweathermap.org/data/2.5/weather?q=${city},${country},&appid=f4b372960c5401bff12c77e94d4a943a`
         }).then((res) => {
             console.log(res.data);
-            setTemp(res.data.main.temp - 273.15);
-            setIcon(res.data.weather[0].icon);
+            
             setMin(res.data.main.temp - min - 273.15);
-            setDescription(res.data.weather[0].description);
             setMax(res.data.main.temp - max - 273.15);
             setCountry(res.data.sys.country);
-            setShowMyComponent(true);
+            
             sendData(res);
         }).catch((err) => {
             console.log(err)

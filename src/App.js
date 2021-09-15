@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './App.css';
 import Clock from 'react-live-clock';
 import WeatherInfo from './weatherInfo'
@@ -47,11 +47,11 @@ class App extends React.Component {
           console.log(position.coords.latitude, position.coords.longitude);
           // this.setState({latitude: position.coords.latitude})
           this.getWeather(position.coords.latitude, position.coords.longitude)
-          this.state.LocationMode = true; 
+          this.setState.LocationMode = true; 
           console.log('nererer', this.state.LocationMode)
         })
         .catch((err) => {
-          this.state.LocationMode = false; 
+          this.setState.LocationMode = false; 
           console.log('nererer', this.state.LocationMode)
         }
         )

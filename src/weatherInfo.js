@@ -17,9 +17,9 @@ function WeatherInfo(props) {
         weatherIcon = 'RAIN';
         break;
         case "RAIN":
-        weatherIcon = 'CLOUDY'
+        weatherIcon = 'CLOUDY';
         default:
-        weatherIcon = 'CLEAR_DAY'  
+        weatherIcon = 'CLEAR_DAY';
     }
     return (
         <React.Fragment>
