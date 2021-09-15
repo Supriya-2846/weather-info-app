@@ -9,18 +9,20 @@ const defaults = {
   };
 function WeatherInfo(props) {
     var weatherIcon = null;
-    switch(props.weatherName){
-        case "Haze":
-        weatherIcon = 'CLOUDY';
-        break;
-        case "Rain":
-        weatherIcon = 'RAIN';
-        break;
-        case "RAIN":
-        weatherIcon = 'CLOUDY';
-        default:
-        weatherIcon = 'CLEAR_DAY';
-    }
+    // switch(props.weatherName){
+    //     default:
+    //     weatherIcon = 'CLEAR_DAY' 
+    //     case "Haze":
+    //     weatherIcon = 'CLOUDY';
+    //     break;
+    //     case "Rain":
+    //     weatherIcon = 'RAIN';
+    //     break;
+    //     case "RAIN":
+    //     weatherIcon = 'CLOUDY';
+    //     // default:
+    //     // weatherIcon = 'CLEAR_DAY' 
+    // }
     return (
         <React.Fragment>
             <div className="col-4 side-bg text-center py-3">
